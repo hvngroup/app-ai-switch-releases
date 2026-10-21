@@ -1,11 +1,23 @@
 # HVN AI Switch — bản phát hành
 
 HVN AI Switch là ứng dụng nằm trên thanh menu (macOS) hoặc khay hệ thống (Windows, Linux)
-để đổi nhanh giữa nhiều tài khoản **Claude Code**, **Codex**, **Cursor** và
-**Antigravity**, xem hạn mức của từng tài khoản và tự động chuyển trước khi hết.
+giúp đội ngũ dùng nhiều tài khoản **Claude Code**, **Codex**, **Cursor** và **Antigravity**
+đổi tài khoản trong một cú bấm. Ứng dụng cho thấy hạn mức còn lại của từng tài khoản, thời
+điểm đặt lại, và tự chuyển Claude Code sang tài khoản khác trước khi tài khoản đang dùng hết
+hạn mức. Ứng dụng làm việc với các công cụ đã cài và đăng nhập sẵn trên máy; giao diện tiếng
+Việt mặc định, có chế độ sáng và tối.
 
-Repo này chỉ chứa bản phát hành và kênh cập nhật của ứng dụng. Mã nguồn được quản lý
-riêng tại HVN GROUP.
+Repo này chỉ chứa bản phát hành và kênh cập nhật của ứng dụng. Mã nguồn được quản lý riêng
+tại HVN GROUP.
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="screenshots/hvn-overview-dark.png">
+    <img src="screenshots/hvn-overview-light.png" width="760" alt="HVN AI Switch: trang Tổng quan với hạn mức của Claude Code, Codex và Cursor, tài khoản theo công cụ và tự động chuyển">
+  </picture>
+</p>
+
+<sub>Ảnh chụp dùng dữ liệu mẫu.</sub>
 
 ## Tải về
 
@@ -20,8 +32,10 @@ Tải bản mới nhất ở trang [Releases](https://github.com/hvngroup/app-ai
 | Linux (x64) | `HVNAISwitch-linux-x64.AppImage` hoặc `HVNAISwitch-linux-x64.deb` |
 
 Dòng lệnh `hvn-switch` có gói riêng (`hvn-switch-cli-*.tar.gz`). Mỗi file có một file
-`.sha256` đi kèm để đối chiếu. File `.sig` và `latest.json` dành cho trình cập nhật của
-ứng dụng.
+`.sha256` đi kèm để đối chiếu.
+
+Các file `latest.json`, `*.sig` và `HVNAISwitch-macos-*.app.tar.gz` dành cho trình cập nhật
+của ứng dụng; anh/chị không cần tải chúng để cài.
 
 ## Cài đặt
 
@@ -34,12 +48,14 @@ Nếu một bản cũ chưa notarize bị macOS chặn: bấm **Done** (đừng 
 "is damaged", chạy lệnh sau trong Terminal rồi mở lại:
 `xattr -dr com.apple.quarantine "/Applications/HVN AI Switch.app"`
 
-**Windows.** Chạy file setup. SmartScreen báo ứng dụng lạ thì bấm **More info → Run
-anyway**.
+**Windows.** Chạy file `-setup.exe`; bản portable thì giải nén file `.zip` rồi chạy
+`HVN AI Switch.exe`. Bản Windows chưa ký số: SmartScreen báo ứng dụng lạ thì bấm **More info
+→ Run anyway**.
 
 **Linux.** AppImage: `chmod +x HVNAISwitch-linux-x64.AppImage` rồi chạy. Gói `.deb`:
 `sudo apt install ./HVNAISwitch-linux-x64.deb`. Biểu tượng trên thanh hệ thống cần
-AppIndicator (GNOME: cài extension AppIndicator).
+AppIndicator (GNOME: cài extension AppIndicator), và login được giữ trong keyring của hệ
+thống (GNOME Keyring hoặc KWallet).
 
 ## Cập nhật
 
@@ -57,7 +73,7 @@ Tài khoản và cài đặt được giữ nguyên.
 - Lỗ hổng bảo mật: gửi qua
   [security advisory riêng](https://github.com/hvngroup/app-ai-switch-releases/security/advisories/new),
   đừng mở issue công khai. Cách ứng dụng xử lý dữ liệu: [SECURITY.md](SECURITY.md).
-- Hỗ trợ kỹ thuật: kythuat@hvn.vn · Hotline 024.9999.7777
+- Hỗ trợ kỹ thuật: `kythuat@hvn.vn · Hotline 024.9999.7777`
 
 ## Giấy phép
 
