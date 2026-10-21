@@ -1,0 +1,48 @@
+name: Báo lỗi
+description: Ứng dụng hoạt động không đúng như mong đợi
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Cảm ơn anh/chị đã báo lỗi. **Không dán token, `.credentials.json`, `auth.json` hay file trong `~/.pitstop/vault/`.**
+        Lỗ hổng bảo mật: gửi riêng theo [SECURITY.md](../blob/main/SECURITY.md), không mở issue công khai.
+  - type: textarea
+    id: what
+    attributes:
+      label: Chuyện gì đã xảy ra?
+      description: Và anh/chị mong đợi điều gì?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Các bước tái hiện
+      placeholder: |
+        1. Bấm biểu tượng trên thanh menu
+        2. Chọn tài khoản ...
+    validations:
+      required: true
+  - type: textarea
+    id: about
+    attributes:
+      label: Thông tin ứng dụng
+      description: Dán nội dung từ **Cài đặt → Giới thiệu → Sao chép thông tin** (phiên bản, hệ điều hành, cách cài).
+      render: text
+    validations:
+      required: true
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Công cụ liên quan
+      multiple: true
+      options:
+        - Claude Code
+        - Codex
+        - Cursor
+        - Antigravity
+  - type: textarea
+    id: extra
+    attributes:
+      label: Ảnh chụp hoặc thông tin thêm
+      description: Che email và tên tài khoản thật nếu không muốn công khai.
