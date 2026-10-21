@@ -56,7 +56,7 @@ Tài khoản và cài đặt được giữ nguyên.
   Ghi kèm phần **Cài đặt → Giới thiệu → Sao chép thông tin** của ứng dụng.
 - Lỗ hổng bảo mật: gửi qua
   [security advisory riêng](https://github.com/hvngroup/app-ai-switch-releases/security/advisories/new),
-  đừng mở issue công khai.
+  đừng mở issue công khai. Cách ứng dụng xử lý dữ liệu: [SECURITY.md](SECURITY.md).
 - Hỗ trợ kỹ thuật: kythuat@hvn.vn · Hotline 024.9999.7777
 
 ## Giấy phép

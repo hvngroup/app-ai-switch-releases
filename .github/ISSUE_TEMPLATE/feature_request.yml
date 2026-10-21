@@ -1,0 +1,19 @@
+name: Đề xuất tính năng
+description: Ý tưởng giúp HVN AI Switch tốt hơn
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Anh/chị muốn làm gì?
+      description: Mô tả vấn đề hoặc tình huống, không chỉ giải pháp.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Nên hoạt động thế nào?
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Hiện anh/chị đang xoay xở ra sao?
